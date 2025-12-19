@@ -6,9 +6,9 @@ from collections import Counter
 app = Flask(__name__)
 CORS(app)
 
-rf = pickle.load(open("models/random_forest_model.pkl", "rb"))
-gb = pickle.load(open("models/gradient_boosting_model.pkl", "rb"))
-lr = pickle.load(open("models/logistic_regression_model.pkl", "rb"))
+rf = pickle.load(open("Models/random_forest_model.pkl", "rb"))
+gb = pickle.load(open("Models/gradient_boosting_model.pkl", "rb"))
+lr = pickle.load(open("Models/logistic_regression_model.pkl", "rb"))
 
 def ensemble_predict(freq, signal):
     X = [[freq, signal]]
